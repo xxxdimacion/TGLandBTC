@@ -1,0 +1,6 @@
+{
+  "name": "TG Redirect Landing",
+  "description": "Простая прокладка-лендинг в стиле Telegram для арбитража трафика с интеграцией пикселей TikTok и Meta (Facebook)",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
