@@ -16,7 +16,7 @@ export default function App() {
   // === НАСТРОЙКИ ===
   const channelName = "BTC";
   const subscribersCount = "475 подписчиков";
-  const telegramLink = "https://t.me/+CSTYtH6Ycmg1Mjcy"; // Ссылка на канал
+  const telegramLink = "tg://join?invite=CSTYtH6Ycmg1Mjcy"; // Диплинка для iOS (сразу открывает приложение Телеграма, минуя браузер)
   const avatarUrl = "https://i.ibb.co/7FQkbdd/photo-2026-03-31-02-24-51-2.jpg"; // Изображение пользователя
   
   const handleRedirect = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -29,8 +29,11 @@ export default function App() {
     if (window.ttq) {
       window.ttq.track('SubmitForm');
     }
-    // 3. Выполняем переход
-    window.location.href = telegramLink;
+    
+    // 3. Даем пикселям 300мс на отправку запросов перед скрытием страницы (что гарантирует отстук в пиксель)
+    setTimeout(() => {
+      window.location.href = telegramLink;
+    }, 300);
   };
 
   useEffect(() => {
