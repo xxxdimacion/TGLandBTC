@@ -101,7 +101,7 @@ export default function App() {
             <div className="tgme_page_action">
               <a className="tgme_action_button_new shine" href={telegramLink} onClick={handleRedirect}>Присоединиться к каналу</a>
             </div>
-            <div className="tgme_page_additional">
+            <div className="tgme_page_additional" style={{ display: 'block' }}>
               Вы приглашены в канал <strong dir="auto">{channelName}</strong>. Нажмите выше, чтобы присоединиться.
             </div>
           </div>
